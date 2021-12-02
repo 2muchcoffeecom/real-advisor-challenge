@@ -1,0 +1,20 @@
+actions:
+- name: tail_data
+  definition:
+    kind: ""
+    handler: '{{ACTION_BASE_URL}}/get-tail-data'
+custom_types:
+  enums: []
+  input_objects: []
+  objects:
+  - name: tail_data
+    relationships:
+    - remote_table:
+        schema: public
+        name: long_tails
+      name: tail_entity
+      source: db-test
+      type: object
+      field_mapping:
+        id: json_id
+  scalars: []

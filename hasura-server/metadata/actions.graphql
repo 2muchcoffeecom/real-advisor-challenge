@@ -1,0 +1,10 @@
+type Query {
+  tail_data: [tail_data]
+}
+
+type tail_data {
+  id: Int
+  title: String
+  description: String
+}
+
